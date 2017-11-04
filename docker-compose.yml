@@ -1,0 +1,11 @@
+version: '2'
+services:
+  jenkins-website-deployment:
+      container_name: jenkins-website-deployment
+      image: jenkins
+      ports:
+        - 1111:8080
+      volumes:
+        - './data-jenkins:/var/jenkins_home'
+        - './workspace:/var/jenkins_home'
+
